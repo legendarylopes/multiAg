@@ -1,0 +1,10 @@
+# Ambiente Virtual
+venv/
+
+# Arquivos de dados
+*.csv
+*.sql
+# Variáveis de ambiente
+.env
+.env.local
+.env.*.local
