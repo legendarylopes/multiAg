@@ -1,5 +1,9 @@
 # Ambiente Virtual
 venv/
+.venv/
+env/
+ENV/
+.env.venv
 
 # Arquivos de dados
 *.csv
