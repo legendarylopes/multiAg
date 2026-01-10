@@ -1,151 +1,621 @@
-# LangChain- Develop AI Agents with LangChain & LangGraph 🦜🔗
+# MultiAg - Agentes de IA com Arquitetura React 🦜🔗
 
-**Learn LangChain and LangGraph by building real world AI Agents (Python, Latest Version V.1.0+)**
+**Sistema de Agentes Inteligentes com LangChain, implementando arquitetura React para raciocínio estruturado e tomada de decisão autônoma**
 
-This course is designed to teach you how to QUICKLY harness the power of the LangChain library for LLM applications. Build 3 end-to-end working LangChain based generative AI applications with no fluff, no toy examples - just real projects using real APIs and real-world skills.
+MultiAg é um projeto robusto que demonstra como construir agentes de inteligência artificial sofisticados utilizando LangChain. O sistema implementa a arquitetura **ReAct** (Reasoning + Acting), permitindo que os agentes de IA resolvam problemas complexos através de um ciclo iterativo de pensamento, ação e observação.
 
 ![LangChain Logo](/static/LangChain-logo.svg)
-![LangGraph Logo](/static/LangGraph%20wordmark%20-%20dark.svg)
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/EdenMarco177?style=social)](https://twitter.com/EdenMarco177)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-
-[![udemy](https://img.shields.io/badge/LangChain%20Udemy%20Course%20Coupon%20%2412.99-brightgreen)](https://www.udemy.com/course/langchain/?couponCode=DEC-2025)
-
-
-
-## 💡 What You'll Build 
-
-This course takes you through building 7 real-world AI agent projects, from simple hello-world applications to advanced agentic systems:
-
-| Project | Type | Description |
-|---------|------|-------------|
-| 👋 [LangChain Hello World](https://github.com/emarco177/langchain-course/tree/project/hello-world) | Branch (`project/hello-world`) | Your first AI agent - basic structure and LLM integration |
-| 🔎  [Modern Search Agent](https://github.com/emarco177/ice_breaker/tree/project/search-agent) | Branch (`project/search-agent`) | Build search agents using LangChain v.1's `create_agent` interface with custom tools, Tavily integration, and structured outputs |
-| 🔎 [Classic ReAct Search Agent](https://github.com/emarco177/langchain-course/tree/project/ReAct-search-agent) | Branch (`project/ReAct-search-agent`) | ReAct agent with search capabilities using the original `create_react_agent` from langchain-classic |
-| 🧠 [ReAct Algorithm Under the Hood](https://github.com/emarco177/langchain-course/tree/project/ReAct-Algo) | Branch (`project/ReAct-Algo`) | Understanding reasoning and acting patterns in AI agents |
-| 📄 [RAG Gist](https://github.com/emarco177/langchain-course/tree/project/rag-gist) | Branch (`project/rag-gist`) | The gist of retrieval-augmented generation |
-| 📚 [Documentation Helper](https://github.com/emarco177/documentation-helper) | External Repo | Intelligent documentation assistant |
-| 💻 [Code Interpreter](https://github.com/emarco177/langchain-course/tree/project/code-interpreter) | Branch (`project/code-interpreter`) | AI-powered code execution and analysis |
-| 🪞 [Reflection Agent](https://github.com/emarco177/langgraph-course/tree/project/reflection-agent) | External Repo | Self-improving agent with reflection and critique capabilities |
-| 🔄 [Reflexion Agent](https://github.com/emarco177/langgraph-course/tree/project/reflexion-agent) | External Repo | Advanced self-correcting agent using reflexion techniques |
-| 🤖 [Agentic RAG](https://github.com/emarco177/langgraph-course/tree/project/agentic-rag) | External Repo | Advanced retrieval-augmented generation system |
-
-## 📚 Course Highlights 
-
-- **7 Complete Projects** - From beginner to advanced implementations including Ice Breaker, Documentation Helper, and Code Interpreter
-- **Real-World Applications** - Build agents that solve actual problems with live APIs
-- **Modern Tech Stack** - LangChain v0.3+, LangGraph, Pinecone, FAISS, Streamlit
-- **Practical Skills** - Learn RAG, vector databases, prompt engineering, and agent workflows
-- **Interactive Learning** - Follow commits chronologically for step-by-step learning
-
-## 🤔 Learning Path 
-
-### Phase 1: Foundations
-1. **Hello World Chain** - Basic agent structure and LLM integration
-2. **Code Interpreter** - Tool calling and code execution capabilities
-
-### Phase 2: Real-World Applications
-3. **Ice Breaker** - Data collection and social media integration
-4. **Documentation Helper** - RAG implementation and knowledge management
-
-### Phase 3: Advanced Concepts
-5. **Blog Analyzer** - Multi-step reasoning and content analysis
-6. **Agentic RAG** - Self-correcting agents with memory and planning
-
-## ▶️ Getting Started 
-
-### 🛠️ Prerequisites 
-- **This is not a beginner course** - Basic software engineering concepts needed
-- Familiarity with: git, Python, environment variables, classes, testing and debugging
-- Python 3.10+
-- Any Python package manager (uv, poetry, pipenv) - but NOT conda!
-- Access to an LLM (can be open source via Ollama, or cloud providers like OpenAI, Anthropic, Gemini)
-- No Machine Learning experience needed
-
-### ⚙️ Setup Instructions 
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/emarco177/langchain-course
-   cd langchain-course
-   ```
-2. **Choose your learning path**
-   
-   **For branch-based projects:**
-   ```bash
-   # Start with Hello World
-   git checkout project/hello-world
-   uv sync
-   uv run python main.py
-   
-   # Progress to Code Interpreter
-   git checkout project/code-interpreter
-   uv sync
-   uv run python main.py
-   ```
-   
-   **For external repository projects:**
-   ```bash
-   # Clone specific project repositories
-   git clone https://github.com/emarco177/ice_breaker
-   cd ice_breaker
-   # Follow project-specific setup instructions
-   ```
-
-3. **Follow the commits**
-   - Each commit represents a lesson or feature implementation
-   - Use `git log --oneline` to see the learning progression
-   - Checkout previous commits to understand the development process
-
-**External Projects:**
-- [Ice Breaker](https://github.com/emarco177/ice_breaker) - Social media profile analyzer
-- [Medium Analyzer](https://github.com/emarco177/blog-analyzer) - Content analysis and insights generator
-- [Documentation Helper](https://github.com/emarco177/documentation-helper) - AI documentation assistant
-- [Reflection Agent](https://github.com/emarco177/langgraph-course/tree/project/reflection-agent) - Self-improving agent with reflection and critique capabilities
-- [Reflexion Agent](https://github.com/emarco177/langgraph-course/tree/project/reflexion-agent) - Advanced self-correcting agent using reflexion techniques
-- [Agentic RAG](https://github.com/emarco177/langgraph-course/tree/project/agentic-rag) - Advanced retrieval-augmented generation system
-
-
-## 📚 Learning Objectives 
-
-By the end of this course, you'll be able to:
-
-- Build AI agents from scratch using modern frameworks
-- Implement tool calling and external API integrations
-- Create RAG systems with vector databases
-- Design multi-step reasoning workflows
-- Deploy agents to production environments
-- Handle error correction and self-improvement in agents
-- Optimize agent performance and cost efficiency
+[![Python](https://img.shields.io/badge/Python-3.11+-blue)](https://www.python.org/)
+[![LangChain](https://img.shields.io/badge/LangChain-1.2.0+-green)](https://python.langchain.com/)
 
 
 
+## 🎯 Visão Geral do Projeto
 
+MultiAg é um framework completo para construção de agentes de inteligência artificial que utiliza:
 
-## 🙏 Acknowledgements 
+- **LangChain**: Framework principal para orquestração de modelos de linguagem
+- **Arquitetura ReAct**: Padrão de raciocínio estruturado (Reasoning + Acting)
+- **Tavily Search**: Integração com buscador para acesso a informações em tempo real
+- **Pydantic**: Validação e estruturação de dados com schemas tipados
 
-Big thanks to the **LangChain / LangGraph** team and their excellent [documentation and tutorials](https://langchain-ai.github.io/langgraph/tutorials/introduction/) that make this course possible.
+### Aplicações Práticas
 
-## 🌟 Support
+Este projeto pode ser utilizado para:
+- 🔍 **Busca e Pesquisa Inteligente** - Agentes que buscam informações em tempo real
+- 🎮 **Análise de Videogames** - Consultas estruturadas sobre metas e estratégias (ex: Elden Ring)
+- 💡 **Resolução de Problemas** - Agentes que decompõem problemas complexos
+- 📊 **Extração de Dados** - Coleta e estruturação de informações da web
+- 🤖 **Automação Inteligente** - Integração com APIs e ferramentas externas
 
-If you find this project helpful, please consider:
-- ⭐ Starring the repository
-- 🐛 Reporting issues
-- 💡 Contributing improvements
-- 📢 Sharing with others
+## 🏗️ Arquitetura do Projeto
+
+### Componentes Principais
+
+#### 1. **LangChain - Orquestração de Agentes**
+
+[LangChain](https://python.langchain.com/) é a biblioteca central que fornece:
+
+- **`create_agent()`** - Factory function que cria agentes inteligentes com interface simplificada
+- **`ChatOpenAI`** - Integração com modelos de linguagem OpenAI (GPT-4o, etc.)
+- **`TavilySearch`** - Ferramenta para buscas em tempo real na internet
+- **Tool Calling** - Mecanismo de integração com ferramentas externas
+- **Message Protocol** - Protocolo padronizado de comunicação entre componentes
+
+**Benefícios:**
+- Abstração de complexidade da orquestração de LLMs
+- Suporte nativo a múltiplos modelos (OpenAI, Anthropic, Ollama, etc.)
+- Integração facilitada com APIs e ferramentas
+- Typings fortes com Pydantic
+
+```python
+from langchain.agents import create_agent
+from langchain_openai import ChatOpenAI
+from langchain_tavily import TavilySearch
+
+# Definir ferramentas disponíveis
+tools = [TavilySearch()]
+
+# Inicializar modelo de linguagem
+llm = ChatOpenAI(model="gpt-4o")
+
+# Criar agente com interface simplificada
+agent = create_agent(
+    model=llm,
+    tools=tools,
+    response_format=AgentResponse,
+)
+```
+
+#### 2. **Arquitetura ReAct (Reasoning + Acting)**
+
+ReAct é o padrão arquitetural que governa o comportamento dos agentes. Implementa um ciclo iterativo:
+
+```
+┌─────────────────────────────────────────┐
+│  PENSAMENTO (Thought/Reasoning)         │
+│  - Analisar o problema                  │
+│  - Planejar abordagem                   │
+│  - Decidir qual ferramenta usar         │
+└──────────────┬──────────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────────┐
+│  AÇÃO (Action/Acting)                   │
+│  - Executar ferramenta selecionada      │
+│  - Passar argumentos apropriados        │
+│  - Obter resultado                      │
+└──────────────┬──────────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────────┐
+│  OBSERVAÇÃO (Observation)               │
+│  - Analisar resultado obtido            │
+│  - Atualizar compreensão do problema    │
+│  - Decidir próximo passo                │
+└──────────────┬──────────────────────────┘
+               │
+               ▼ (Repetir até solução)
+```
+
+**Fluxo em Prompt.py:**
+O arquivo `prompt.py` contém o template ReAct que instrui o agente:
+
+```
+Question: [pergunta do usuário]
+Thought: [raciocínio]
+Action: [ferramenta a usar]
+Action Input: [parâmetros]
+Observation: [resultado da ferramenta]
+... (repetir N vezes conforme necessário)
+Final Answer: [resposta estruturada]
+```
+
+**Vantagens:**
+- ✅ Raciocínio transparente e auditável
+- ✅ Decomposição de problemas complexos
+- ✅ Integração natural com múltiplas ferramentas
+- ✅ Capacidade de corrigir erros durante o processo
+- ✅ Explicabilidade das decisões tomadas
+
+#### 3. **Schemas Pydantic - Estruturação de Dados**
+
+O arquivo `schemas.py` define a estrutura esperada das respostas dos agentes:
+
+```python
+class Source(BaseModel):
+    """Referência a uma fonte utilizada"""
+    url: str  # URL da fonte
+
+class AgentResponse(BaseModel):
+    """Resposta estruturada do agente"""
+    answer: str  # Resposta textual
+    sources: List[Source]  # Fontes consultadas
+```
+
+**Benefícios:**
+- 🔒 **Type Safety** - Validação automática de tipos
+- 📋 **Documentação** - Auto-documentação através de docstrings
+- ✔️ **Validação** - Garantia de dados válidos
+- 🔄 **Serialização** - Conversão para JSON automática
+- 🎯 **Rastreabilidade** - Identificação de fontes confiáveis
+
+#### 4. **Tavily Search - Acesso a Dados em Tempo Real**
+
+Ferramenta que permite ao agente buscar informações atualizadas na internet:
+
+```python
+from langchain_tavily import TavilySearch
+
+tools = [TavilySearch()]
+```
+
+**Características:**
+- 🌐 Busca em tempo real na internet
+- 📱 Integração simples com LangChain
+- 📰 Acesso a notícias e informações atualizadas
+- 🔗 Retorna URLs das fontes
+- ⚡ Rápido e eficiente
+
+#### 5. **OpenAI ChatGPT-4o - Motor de Raciocínio**
+
+Modelo de linguagem que alimenta o raciocínio do agente:
+
+```python
+from langchain_openai import ChatOpenAI
+
+llm = ChatOpenAI(model="gpt-4o")
+```
+
+**Características:**
+- 🧠 Raciocínio avançado com compreensão contextual
+- 📚 Conhecimento amplo de múltiplos domínios
+- 🎯 Excelente em seguir instruções estruturadas
+- 🌐 Suporte a múltiplos idiomas
+- ⚡ Modelos rápidos para baixa latência
+
+---
+
+## 📚 Fluxo de Execução Completo
+
+```
+1. INICIALIZAÇÃO
+   └─> Carregar variáveis de ambiente (.env)
+   └─> Inicializar ChatOpenAI com credenciais
+   └─> Registrar ferramentas (TavilySearch)
+
+2. CRIAÇÃO DO AGENTE
+   └─> Instanciar agent com create_agent()
+   └─> Definir response_format (AgentResponse)
+   └─> Preparar template de prompt ReAct
+
+3. INVOCAÇÃO
+   └─> Enviar mensagem de usuário
+   └─> Agent inicia loop ReAct
+
+4. CICLO REACT (repetido)
+   └─> LLM processa estado atual
+   └─> Gera Thought (raciocínio)
+   └─> Seleciona Action (ferramenta)
+   └─> Executa Action Input (parametrização)
+   └─> Observa resultado
+   └─> Atualiza scratchpad interno
+
+5. CONCLUSÃO
+   └─> Agent gera Final Answer
+   └─> Estrutura resposta em AgentResponse
+   └─> Retorna answer + sources
+   └─> Exibe resultado ao usuário
+```
+
+---
+
+## 🚀 Primeiros Passos
+
+### 📋 Pré-requisitos
+
+- **Python 3.11+** - Versão mínima requerida
+- **pip ou poetry** - Gerenciador de pacotes Python
+- **Chave OpenAI API** - Para acesso ao GPT-4o ([Obter em OpenAI](https://platform.openai.com/))
+- **Chave Tavily API** - Para buscas em tempo real ([Obter em Tavily](https://tavily.com/))
+- **Git** - Para controle de versão (opcional)
+
+### 💻 Instalação e Configuração
+
+#### 1. **Clone ou Extraia o Repositório**
+```bash
+git clone <repositório>
+cd multiAg
+```
+
+#### 2. **Crie Ambiente Virtual (Recomendado)**
+
+**Windows (PowerShell):**
+```powershell
+# Usar script fornecido
+.\activate-venv.ps1
+
+# Ou manualmente:
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+**Windows (CMD):**
+```cmd
+.\activate-venv.bat
+```
+
+**Linux/macOS:**
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+#### 3. **Instale as Dependências**
+```bash
+# Usando pip
+pip install -r requirements.txt
+
+# Ou usando poetry
+poetry install
+```
+
+#### 4. **Configure as Variáveis de Ambiente**
+
+Crie um arquivo `.env` na raiz do projeto:
+
+```env
+# OpenAI API Configuration
+OPENAI_API_KEY=sk_seu_api_key_aqui
+
+# Tavily Search Configuration
+TAVILY_API_KEY=seu_tavily_api_key_aqui
+
+# Modelo (opcional, padrão é gpt-4o)
+OPENAI_MODEL_NAME=gpt-4o
+```
+
+**Segurança:** ⚠️ Nunca commit o arquivo `.env` - está incluído no `.gitignore`
+
+#### 5. **Execute o Agente**
+
+```bash
+python main.py
+```
+
+**Exemplo de saída esperada:**
+```
+Searching for meta builds in Elden Ring...
+
+Agent Response:
+{
+  "answer": "As principais builds meta no Elden Ring incluem...",
+  "sources": [
+    {"url": "https://example.com/elden-ring-builds"}
+  ]
+}
+```
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+multiAg/
+├── main.py                    # Arquivo principal com implementação do agente
+├── schemas.py                 # Definições Pydantic para estruturação de dados
+├── prompt.py                  # Templates de prompt ReAct
+├── requirements.txt           # Dependências do projeto
+├── pyproject.toml            # Configuração do projeto (poetry)
+├── SETUP_VENV.md             # Instruções detalhadas de setup
+├── README.md                 # Este arquivo
+├── .env.example              # Exemplo de variáveis de ambiente
+├── activate-venv.ps1         # Script para ativar venv (PowerShell)
+├── activate-venv.bat         # Script para ativar venv (CMD)
+└── .venv/                    # Ambiente virtual (criado após install)
+```
+
+### Arquivos Chave
+
+#### `main.py` - Ponto de Entrada
+Define e executa o agente de IA. Componentes principais:
+- Carregamento de variáveis de ambiente
+- Inicialização do ChatOpenAI
+- Registro de ferramentas (TavilySearch)
+- Criação do agente com `create_agent()`
+- Loop de execução
+
+#### `schemas.py` - Contrato de Dados
+Define estruturas Pydantic que garantem:
+- Respostas estruturadas e tipadas
+- Validação automática de dados
+- Rastreamento de fontes
+- Auto-documentação
+
+#### `prompt.py` - Instruções ReAct
+Template de prompt que guia o agente através do ciclo ReAct. Inclui:
+- Instruções de raciocínio
+- Definição de formato de ações
+- Estrutura de observações
+- Geração de resposta final
+
+---
+
+## 🔄 Exemplo de Uso Completo
+
+### Código
+```python
+from dotenv import load_dotenv
+from langchain.agents import create_agent
+from langchain_openai import ChatOpenAI
+from langchain_tavily import TavilySearch
+from schemas import AgentResponse
+
+# Carregar credenciais
+load_dotenv()
+
+# Inicializar componentes
+tools = [TavilySearch()]
+llm = ChatOpenAI(model="gpt-4o")
+
+# Criar agente
+agent = create_agent(
+    model=llm,
+    tools=tools,
+    response_format=AgentResponse,
+)
+
+# Invocar agente
+result = agent.invoke({
+    "messages": [{
+        "role": "user",
+        "content": "Qual é a melhor build para bosses em Elden Ring?"
+    }]
+})
+
+# Processar resposta
+structured = result.get("structured_response")
+print(f"Resposta: {structured.answer}")
+print(f"Fontes: {[s.url for s in structured.sources]}")
+```
+
+### Fluxo de Execução Detalhado
+
+1. **Invocação:** Agente recebe a pergunta do usuário
+2. **Raciocínio (Thought):** LLM analisa a pergunta
+   - "Preciso buscar informações sobre builds Elden Ring"
+3. **Ação (Action):** Seleciona TavilySearch
+4. **Input:** "best builds Elden Ring bosses"
+5. **Observação:** Recebe resultados da busca
+6. **Iteração:** Repete se necessário mais informações
+7. **Resposta Final:** Estrutura dados em AgentResponse
+8. **Retorno:** Usuário recebe answer + sources
+
+---
+
+## ⚙️ Configuração Avançada
+
+### Trocar Modelo de IA
+
+Para usar outro modelo, edite `main.py`:
+
+```python
+# GPT-3.5 Turbo (mais rápido, mais barato)
+llm = ChatOpenAI(model="gpt-3.5-turbo")
+
+# GPT-4 (mais poderoso)
+llm = ChatOpenAI(model="gpt-4")
+
+# Ollama Local (sem custos)
+from langchain_ollama import ChatOllama
+llm = ChatOllama(model="llama2")
+```
+
+### Adicionar Novas Ferramentas
+
+Estenda `main.py` com ferramentas adicionais:
+
+```python
+from langchain_community.tools import WikipediaQueryRun
+from langchain_community.utilities import WikipediaAPIWrapper
+
+# Adicionar Wikipedia
+tools = [
+    TavilySearch(),
+    WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
+]
+
+agent = create_agent(
+    model=llm,
+    tools=tools,
+    response_format=AgentResponse,
+)
+```
+
+### Customizar Resposta
+
+Estenda `schemas.py` para capturar mais informações:
+
+```python
+from typing import List
+from pydantic import BaseModel, Field
+
+class AgentResponse(BaseModel):
+    answer: str = Field(description="Resposta principal")
+    sources: List[str] = Field(description="URLs das fontes")
+    confidence: float = Field(description="Nível de confiança (0-1)")
+    reasoning_steps: List[str] = Field(description="Passos de raciocínio")
+```
+
+---
+
+## 🐛 Solução de Problemas
+
+### Erro: "OpenAI API Key not found"
+- ✅ Verifique se `.env` existe na raiz do projeto
+- ✅ Confirme que `OPENAI_API_KEY` está definida
+- ✅ Teste a chave em https://platform.openai.com/account/api-keys
+
+### Erro: "Tavily API Key not found"
+- ✅ Configure `TAVILY_API_KEY` no `.env`
+- ✅ Obtenha a chave em https://tavily.com/
+
+### Agente não retorna fontes
+- ✅ Verifique se `response_format=AgentResponse` está definido
+- ✅ Confirme que TavilySearch está nas ferramentas
+- ✅ Aumentar timeout: `ChatOpenAI(model="gpt-4o", timeout=60)`
+
+### Resposta lenta
+- ✅ Use `gpt-3.5-turbo` em vez de `gpt-4o`
+- ✅ Reduza o escopo da busca no prompt
+- ✅ Implemente cache de resultados
+
+---
+
+## 📊 Componentes Técnicos em Detalhe
+
+### LangChain - Ecossistema Completo
+
+**LangChain** não é apenas um framework, é um ecossistema:
+
+- **langchain-core**: Abstrações fundamentais
+- **langchain**: Componentes de alto nível
+- **langchain-openai**: Integração com OpenAI
+- **langchain-tavily**: Integração com Tavily
+- **langchain-classic**: APIs clássicas compatibilidade
+- **langchain-ollama**: Modelos locais Ollama
+
+**Vantagens:**
+- 🔌 Integração plug-and-play com 100+ LLMs
+- 🛠️ Ferramentas nativas para search, SQL, APIs
+- 📊 Memory e estado persistente
+- 🔗 Composição de cadeias complexas
+- 📈 Production-ready com logging e tracing
+
+### Arquitetura ReAct - Padrão de Ouro
+
+ReAct (Reasoning + Acting) é o padrão mais robusto porque:
+
+```
+Transparência      →  Cada pensamento e ação é visível
+├─ Auditoria fácil de decisões
+├─ Debugging simplificado
+└─ Conformidade regulatória
+
+Decomposição       →  Problemas complexos → tarefas simples
+├─ Reduz chance de erros
+├─ Permite correção iterativa
+└─ Escalonável para N passos
+
+Ferramentas        →  Integração natural com APIs/DBs
+├─ Acesso a dados em tempo real
+├─ Cálculos precisos
+└─ Ações concretas no mundo
+
+Correção           →  Capacidade de se auto-corrigir
+├─ Se ação falhar, tenta alternativa
+├─ Aprende do erro
+└─ Melhor taxa de sucesso
+```
+
+### Pydantic - Segurança de Tipos
+
+Pydantic garante contrato entre agente e aplicação:
+
+```python
+class AgentResponse(BaseModel):
+    # Validação automática
+    answer: str  # Deve ser string
+    sources: List[Source]  # Deve ser lista
+    
+    # Metadata automática
+    __doc__ = "Resposta estruturada"
+    
+    # Serialização automática
+    .model_dump()  # → dicionário
+    .model_dump_json()  # → JSON
+    .model_validate()  # ← Parsing
+```
+
+**Por que usar:**
+- ✅ Evita bugs por tipos incorretos
+- ✅ API clara e documentada
+- ✅ Fácil integração com APIs REST
+- ✅ Validação em runtime
+
+---
+
+## 🎯 Casos de Uso Recomendados
+
+| Caso de Uso | Descrição | Ferramentas | Modelo |
+|-------------|-----------|-----------|--------|
+| 🔍 **Busca Inteligente** | Encontrar informações na web | TavilySearch | gpt-3.5-turbo |
+| 📊 **Análise de Dados** | Processar e estruturar dados | Python REPL, SQL | gpt-4o |
+| 🎮 **Recomendações** | Sugerir builds/estratégias | Web Search | gpt-4o |
+| 💬 **Q&A** | Responder perguntas | RAG, Search | gpt-3.5-turbo |
+| 🤖 **Automação** | Executar tarefas complexas | APIs, Webhooks | gpt-4o |
+
+---
+
+## 📚 Recursos Externos
+
+### Documentação Oficial
+- [LangChain Documentation](https://python.langchain.com/)
+- [LangChain API Reference](https://api.python.langchain.com/)
+- [OpenAI API](https://platform.openai.com/docs)
+- [Tavily API](https://docs.tavily.com/)
+
+### Artigos e Tutoriais
+- [ReAct Paper](https://arxiv.org/abs/2210.03629) - Reasoning + Acting in Language Models
+- [LangChain Blog](https://blog.langchain.dev/) - Novidades e tutoriais
+- [OpenAI Cookbook](https://github.com/openai/openai-cookbook) - Exemplos práticos
+
+### Comunidade
+- [LangChain Discord](https://discord.gg/langchain) - Chat comunitário
+- [GitHub Issues](https://github.com/langchain-ai/langchain) - Reporte bugs
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/langchain) - Q&A
+
+---
+
+## ✨ Próximos Passos
+
+Para evoluir este projeto:
+
+1. **Adicione Persistência:** Implemente banco de dados para cache
+2. **Múltiplos Agentes:** Crie sistema multi-agente com delegação
+3. **Interface Web:** Desenvolva UI com Streamlit ou FastAPI
+4. **Monitoramento:** Adicione logging e tracing com LangSmith
+5. **Otimização:** Implemente caching e rate limiting
+
+---
+
+## 📄 Licença
+
+Este projeto está sob licença **Apache 2.0**. Veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+---
+
+## 🤝 Contribuições
+
+Contribuições são bem-vindas! Por favor:
+
+1. Faça fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
 
 ---
 
 <div align="center">
 
-### 🔗 Connect with Me
+### 🌟 Se gostou do projeto, deixe uma estrela! ⭐
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.udemy.com/course/langchain/?referralCode=D981B8213164A3EA91AC)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eden-marco/)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/EdenEmarco177)
+**Construído com ❤️ usando LangChain e IA Moderna**
 
-**Built with ❤️ by Eden Marco**
+Desenvolvido em 2026
 
 </div>
 
